@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+body {
+    background-color: #f5f5f7;
+}
+.navtext {
+    
+    font-size: 12px;
+     font-weight:400;
+     font-family: Arial, sans-serif ;
+}
