@@ -39,3 +39,34 @@ body {
     }
     
 }
+.title {
+    font-family: "Inter", sans-serif;
+
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+
+}
+.description {
+    font-family: "Inter", sans-serif;
+
+    font-size: 30px;
+    font-weight: 400;
+   
+    letter-spacing: -0.01em;
+ 
+}
+.cardthreeheading {
+    font-family: "Inter", sans-serif;
+
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.cardthreeheadingdes {
+    font-family: "Inter", sans-serif;
+
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
