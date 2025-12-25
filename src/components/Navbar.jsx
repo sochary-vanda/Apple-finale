@@ -25,8 +25,38 @@ const menus = [
 ];
 
 const menuContent = {
-  store: ["Shop the Latest", "Mac", "iPad", "iPhone"],
-  mac: ["MacBook Air", "MacBook Pro", "iMac", "Mac mini"],
+  store: {
+    a1: [
+      "Shop the Latest",
+      "Mac",
+      "iPad",
+      "iPhone",
+      "MacBook Air",
+      "MacBook Pro",
+      "iMac",
+      "Mac mini",
+      "MacBook Pro",
+      "iMac",
+      "Mac mini",
+    ],
+    a2: ["Watch", "AirPods", "TV & Home"],
+    a3: ["Accessories", "Gift Cards"]
+  },
+  mac: {a1: [
+      "Shop the Latest",
+      "Mac",
+      "iPad",
+      "iPhone",
+      "MacBook Air",
+      "MacBook Pro",
+      "iMac",
+      "Mac mini",
+      "MacBook Pro",
+      "iMac",
+      "Mac mini",
+    ],
+    a2: ["Watch", "AirPods", "TV & Home"],
+    a3: ["Accessories", "Gift Cards"]},
   ipad: ["iPad Pro", "iPad Air", "iPad mini"],
   iphone: ["iPhone 15", "iPhone 15 Pro", "Compare"],
   watch: ["iPad Pro", "iPad Air", "iPad mini"],
@@ -42,55 +72,91 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
   return (
-    <div className="flex items-center justify-center">
-          <nav
-      className="relative  tracking-wider bg-white"
-      onMouseLeave={() => setActiveMenu(null)}
-    >
-      {/* Top bar */}
-      <div className="max-w-7xl mx-auto   navtext ">
-        <ul className="flex items-center justify-center space-x-10 h-14 border-2">
+    <div className="flex items-center justify-center bg-white w-screen  top-0 fixed z-50">
+      <nav
+        className="  tracking-wider "
+        onMouseLeave={() => setActiveMenu(null)}
+      >
+        <div>
+          {/* Top bar */}
+          <div className=" mx-auto    ">
+            <ul className="flex items-center justify-center space-x-8 h-[44px] px-[22px] inter-apple">
+              {/* Logo */}
+              <li  >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="apple logo" className="w-3.5" />
+              </li>
 
-          {/* Logo */}
-          <li className="font-semibold text-lg select-none"></li>
+              {/* Menu items */}
+              {menus.map((menu) => (
+                <li
+                  key={menu.id}
+                  className="cursor-pointer text-gray-800 hover:text-black"
+                  onMouseEnter={() => {
+                    if (menuContent[menu.id]) {
+                      setActiveMenu(menu.id);
+                    }
+                  }}
+                >
+                  {menu.label}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          {/* Menu items */}
-          {menus.map((menu) => (
-            <li
-              key={menu.id}
-              className="cursor-pointer text-gray-800 hover:text-black"
-              onMouseEnter={() => {
-                if (menuContent[menu.id]) {
-                  setActiveMenu(menu.id);
-                }
-              }}
-            >
-              {menu.label}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Dropdown */}
-      {activeMenu && menuContent[activeMenu] && (
-  <div className="absolute left-0 w-full bg-white ">
-    <div className="max-w-7xl mx-auto ">
-      <div className=" py-6 border-1">
-        <ul className="grid grid-cols-4 gap-6 text-sm text-gray-800 ">
-          {menuContent[activeMenu].map((item) => (
-            <li key={item} className="cursor-pointer hover:text-blue-600">
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+          {/* Dropdown */}
+          {activeMenu && menuContent[activeMenu] && (
+            <div className="relative  w-full bg-white h-auto  ">
+              <div className="max-w-7xl mx-auto">
+                 <div
+        className="py-10  "
+        
+      >
+                  <div
+                    className="grid grid-cols-[1.5fr_0.5fr_4fr] gap-x-4
+ text-sm text-gray-800 "
+                  >
+                    {Array.isArray(menuContent[activeMenu]) ? (
+                      /* Single-column menus */
+                      <ul className="space-y-3 px-4 ">
+                        {menuContent[activeMenu].map((item) => (
+                          <li
+                            key={item}
+                            className="cursor-pointer hover:text-blue-600"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      /* STORE (3 columns) */
+                      Object.values(menuContent[activeMenu]).map(
+                        (column, idx) => (
+                          <ul
+                            key={idx}
+                            className={`space-y-2 ${
+                              idx === 0 ? "pr-16" : "px-4"
+                            }` } 
+                          >
+                            {column.map((item) => (
+                              <li
+                                key={item}
+                                className="cursor-pointer hover:text-blue-600 navbar"
+                              >
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        )
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
     </div>
-  </div>
-)}
-
-    </nav>
-</div>
-    
   );
 };
 
