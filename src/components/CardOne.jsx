@@ -9,8 +9,8 @@ const CardOne = () => {
 
       <div className="absolute top-20 left-0 right-0 flex  flex-col justify-center items-center  gap-3">
         <div className="flex flex-col items-center -space-y-4"> 
-            <div className="title ">Wrapping up this special season.</div>
-        <div className="description ">There's still time to make their holiday one of a kind.</div>
+            <div className="title">Wrapping up this special season.</div>
+        <div className="description">There's still time to make their holiday one of a kind.</div>
         </div>
         <div  >
             <Button text="Shop gifts"  />

@@ -1,0 +1,136 @@
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+  .card {
+    width: 275px;
+    height: 496px;
+  }
+
+  .track {
+    padding-left: calc(50% - 137.5px); /* center 275px card */
+  }
+}
+
+.apple-slider {
+  
+  color: white;
+  padding: 60px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  
+}
+
+.viewport {
+  overflow: hidden;
+}
+.track {
+  display: flex;
+}
+
+.track.animate {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.track {
+  display: flex;
+  gap: 24px;
+  padding-left: calc(50% - 344px);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card {
+  width: 688px;
+  height: 367px;
+  flex-shrink: 0;
+  
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+
+.caption {
+  font-size: 18px;
+  
+}
+
+.watch-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* dots + play */
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666;
+  border: none;
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 22px;
+  border-radius: 999px;
+  background: white;
+}
+
+/* play button */
+
+.play-btn {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* mobile only */
+@media (max-width: 768px) {
+  .track {
+    padding-left: 16px;
+  }
+
+  .card {
+    width: 300px;
+    height: 420px;
+  }
+
+  .play-btn {
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
