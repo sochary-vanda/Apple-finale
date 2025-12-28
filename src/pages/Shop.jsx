@@ -4,14 +4,19 @@ import { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import ProductCarousel from "../components/ProductCarousel";
 import Navbar from "../components/Navbar";
+import Shop_ironman from "../components/Shop_ironman";
+import AppleStore from "../components/AppleStore";
+import Batman from "./Batman";
+import Jessica from "../components/Jessica";
+import Jennifer from "../components/Jennifer";
+import FooterShop from "../components/FooterShop.jsx";
 
 function Shop() {
-  const [showBanner, setShowBanner] = useState(false);
-
   useEffect(() => {
     // triggers animation after first paint
     setShowBanner(true);
   }, []);
+  const [showBanner, setShowBanner] = useState(false);
 
   return (
     <>
@@ -53,14 +58,80 @@ function Shop() {
         </div>
 
         <Store_card1 />
+
         <div className="max-w-7xl mx-auto py-16">
           <h2 className="text-3xl font-semibold mb-8">
             The latest.{" "}
             <span className="text-gray-500">Take a look at what’s new.</span>
           </h2>
+
           <ProductCarousel />
         </div>
+        <div className="max-w-7xl mx-auto py-16">
+          <h2 className="text-3xl font-semibold mb-8">
+            Help is here.{" "}
+            <span className="text-gray-500">
+              Whenever and however you need it.
+            </span>
+          </h2>
+
+          <Shop_ironman />
+        </div>
+        <div className="max-w-7xl mx-auto py-16">
+          <h2 className="text-3xl font-semibold mb-8">
+            The Apple Store difference.{" "}
+            <span className="text-gray-500">
+              Even more reasons to shop with us.
+            </span>
+          </h2>
+          <AppleStore />
+        </div>
+        <div className="max-w-7xl mx-auto py-16">
+          <h2 className="text-3xl font-semibold mb-8">
+            Made to move.{" "}
+            <span className="text-gray-500">
+              Level up your health and fitness.
+            </span>
+          </h2>
+          <Batman></Batman>
+        </div>
+        <div className="max-w-7xl mx-auto py-16">
+          <h2 className="text-3xl font-semibold mb-8">
+            The Apple experience.{" "}
+            <span className="text-gray-500">
+              Do even more with Apple products and services.
+            </span>
+          </h2>
+          <Jennifer></Jennifer>
+          
+        </div>
+        <div className="max-w-7xl mx-auto py-16">
+          <h2 className="text-3xl font-semibold mb-8">
+            Savings and offers.{" "}
+            <span className="text-gray-500">
+               Exclusive deals, special stores and more.
+            </span>
+          </h2>
+          <Jessica></Jessica>
+        </div>
+        <div className="max-w-7xl mx-auto pt-16 pb-10">
+          <h2 className="text-3xl font-semibold mb-8 text-gray-800">
+            Quick Links{" "}
+           
+          </h2>
+          <div className="flex space-x-2">
+            <button className="border px-3 rounded-2xl py-1 hover:text-white hover:bg-black">Find a store</button>
+          <button className="border px-3 rounded-2xl py-1 hover:text-white hover:bg-black">Order status</button>
+          <button className="border px-3 rounded-2xl py-1 hover:text-white hover:bg-black">Shopping Help</button>
+          <button className="border px-3 rounded-2xl py-1 hover:text-white hover:bg-black">Return </button>
+          <button className="border border-[#1d1d1f] px-3 rounded-2xl py-1 hover:text-white hover:bg-black">Your saves</button>
+          </div>
+          
+        </div>
+    
       </div>
+      <FooterShop></FooterShop>
+
     </>
   );
 }

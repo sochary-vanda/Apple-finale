@@ -118,7 +118,7 @@ export default function ProductCarousel() {
       {canScrollLeft && (
         <button
           onClick={() => scroll("left")}
-          className="hidden md:flex absolute left-7 top-1/2 -translate-y-1/2 z-10 bg-[#d2d2d7a3] hover:bg-[#dfdfe2b2] active:bg-[#c2c2c7a7] shadow rounded-full p-2"
+          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d2d2d7a3] hover:bg-[#dfdfe2b2] active:bg-[#c2c2c7a7] shadow rounded-full p-2"
         >
           <ChevronLeft size={24} className="md:w-10 md:h-10 "/>
         </button>
@@ -128,7 +128,7 @@ export default function ProductCarousel() {
       {canScrollRight && (
         <button
           onClick={() => scroll("right")}
-          className="hidden md:flex absolute right-7 top-1/2 -translate-y-1/2 z-10 bg-[#d2d2d7a3] hover:bg-[#dfdfe2b2] active:bg-[#c2c2c7a7] shadow rounded-full p-2"
+          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d2d2d7a3] hover:bg-[#dfdfe2b2] active:bg-[#c2c2c7a7] shadow rounded-full p-2"
         >
           <ChevronRight size={24} className="md:w-10 md:h-10 "/>
         </button>

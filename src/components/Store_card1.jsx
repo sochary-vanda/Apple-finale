@@ -80,7 +80,7 @@ export default function Store_card1() {
       {/* SLIDER */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-30"
+        className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-20"
       >
         {items.map((item) => (
           <Shop_cardlogo
