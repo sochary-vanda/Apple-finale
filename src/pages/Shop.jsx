@@ -6,7 +6,7 @@ import ProductCarousel from "../components/ProductCarousel";
 import Navbar from "../components/Navbar";
 import Shop_ironman from "../components/Shop_ironman";
 import AppleStore from "../components/AppleStore";
-import Batman from "./Batman";
+import Batman from "../components/Batman.jsx";
 import Jessica from "../components/Jessica";
 import Jennifer from "../components/Jennifer";
 import FooterShop from "../components/FooterShop.jsx";
