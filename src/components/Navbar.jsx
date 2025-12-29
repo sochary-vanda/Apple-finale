@@ -89,7 +89,7 @@ const menuContent = {
         "Better with iPhone",
         "iCloud+",
         "Mac for Business",
-        "Education"
+        "Education",
       ],
     },
   },
@@ -128,7 +128,7 @@ const menuContent = {
         "Better with iPhone",
         "iCloud+",
         "Mac for Business",
-        "Education"
+        "Education",
       ],
     },
   },
@@ -142,7 +142,6 @@ const menuContent = {
         "iPhone 17 ",
         "iPhone 16",
         "iPhone 16e",
-        
       ],
     },
     quickLinks: {
@@ -166,11 +165,11 @@ const menuContent = {
         "Better with iPhone",
         "iCloud+",
         "Mac for Business",
-        "Education"
+        "Education",
       ],
     },
   },
-  watch : {
+  watch: {
     shop: {
       title: "Explore Watch",
       items: [
@@ -203,17 +202,14 @@ const menuContent = {
         "Better with iPhone",
         "iCloud+",
         "Apple Watch for Business",
-        "Education"
+        "Education",
       ],
     },
   },
-  vision : {
+  vision: {
     shop: {
       title: "Explore visions",
-      items: [
-        "Explore Apple Vision Pro",
-         
-      ],
+      items: ["Explore Apple Vision Pro"],
     },
     quickLinks: {
       title: "Shop Vision",
@@ -232,10 +228,10 @@ const menuContent = {
         "AppleCare",
         "macOS Tahoe",
         "Apple Intelligence",
-        
       ],
     },
-  },airpods: {
+  },
+  airpods: {
     shop: {
       title: "Explore All Airpods",
       items: [
@@ -244,18 +240,11 @@ const menuContent = {
         "Airpods 3",
         "Airpods Pro",
         "Airpods",
-         
-        
       ],
     },
     quickLinks: {
       title: "Shop Airpods",
-      items: [
-        "Shop Airpods",
-        "Airpods accessories",
-        
-        
-      ],
+      items: ["Shop Airpods", "Airpods accessories"],
     },
     specialStores: {
       title: "More from Airpods",
@@ -268,29 +257,18 @@ const menuContent = {
         "Better with Airpods",
         "iCloud+",
         "Mac for Business",
-        "Education"
+        "Education",
       ],
     },
   },
   tvhome: {
     shop: {
       title: "Explore TV & Home ",
-      items: [
-        "Explore TV & Home",
-        "Apple TV 4K",
-        "HomePod",
-        "HomePod mini",
-       
-      ],
+      items: ["Explore TV & Home", "Apple TV 4K", "HomePod", "HomePod mini"],
     },
     quickLinks: {
       title: "Shop TV & Home",
-      items: [
-        "Shop TV",
-        "TV accessories",
-        
-        
-      ],
+      items: ["Shop TV", "TV accessories"],
     },
     specialStores: {
       title: "More from Airpods",
@@ -303,7 +281,7 @@ const menuContent = {
         "Better with TV",
         "iCloud+",
         "Mac for Business",
-        "Education"
+        "Education",
       ],
     },
   },
@@ -379,30 +357,28 @@ const Navbar = () => {
           <div className="hidden md:block absolute top-[44px] left-0 w-full bg-white/95 backdrop-blur-xl">
             <div className="mx-auto max-w-[1024px] px-6 pt-10 pb-20">
               <div className="grid grid-cols-3 gap-x-2">
-                {Object.values(menuContent[activeMenu]).map(
-                  (section, idx) => (
-                    <div key={idx}>
-                      <p className="mb-4 text-[12px] text-gray-500 font-medium">
-                        {section.title}
-                      </p>
+                {Object.values(menuContent[activeMenu]).map((section, idx) => (
+                  <div key={idx}>
+                    <p className="mb-4 text-[12px] text-gray-500 font-medium">
+                      {section.title}
+                    </p>
 
-                      <ul className="space-y-3">
-                        {section.items.map((item) => (
-                          <li
-                            key={item}
-                            className={
-                              idx === 0
-                                ? "text-[24px] font-semibold leading-tight text-gray-900 cursor-pointer hover:text-gray-600"
-                                : "text-[13px] font-normal text-gray-700 cursor-pointer hover:text-gray-900"
-                            }
-                          >
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                )}
+                    <ul className="space-y-3">
+                      {section.items.map((item) => (
+                        <li
+                          key={item}
+                          className={
+                            idx === 0
+                              ? "text-[24px] font-semibold leading-tight text-gray-900 cursor-pointer hover:text-gray-600"
+                              : "text-[13px] font-normal text-gray-700 cursor-pointer hover:text-gray-900"
+                          }
+                        >
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
